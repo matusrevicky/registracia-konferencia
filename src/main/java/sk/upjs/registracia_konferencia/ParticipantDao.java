@@ -16,6 +16,7 @@ public class ParticipantDao {
 		this.add(p);
 	}
 
+	// comment
 	public void add(Participant participant) {
 		participant.setId(++lastID);
 		participants.add(participant);
