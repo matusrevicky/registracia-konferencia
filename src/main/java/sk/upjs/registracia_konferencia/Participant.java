@@ -5,6 +5,8 @@ import java.util.List;
 
 public class Participant {
 	public static final double SINGLE_ROOM_FEE = 75.0;
+
+	private Long id;
 	private String name;
 	private String surname;
 	private String email;
@@ -44,11 +46,16 @@ public class Participant {
 
 		if (companions != null) {
 			for (Companion comp : companions) {
-				price = price+comp.getPrice();
+				price = price + comp.getPrice();
 			}
 		}
 
 		return price;
+	}
+
+	@Override
+	public String toString() {
+		return "Participant [id=" + id + ", name=" + name + ", surname=" + surname + ", email=" + email + "]";
 	}
 
 	public String getName() {
@@ -178,4 +185,13 @@ public class Participant {
 	public void setCash(boolean cash) {
 		this.cash = cash;
 	}
+
+	public Long getId() {
+		return id;
+	}
+
+	public void setId(Long id) {
+		this.id = id;
+	}
+
 }
