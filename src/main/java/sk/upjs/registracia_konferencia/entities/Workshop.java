@@ -4,6 +4,7 @@ import java.time.LocalDate;
 import java.time.LocalDateTime;
 
 public class Workshop {
+	private Long id;
 	private String name;
 	private LocalDate start;
 	private LocalDate end;
@@ -14,6 +15,12 @@ public class Workshop {
 	
 	
 	
+	public Long getId() {
+		return id;
+	}
+	public void setId(Long id) {
+		this.id = id;
+	}
 	public String getName() {
 		return name;
 	}
